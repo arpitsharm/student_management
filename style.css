@@ -1,0 +1,218 @@
+/* Base styles */
+:root {
+  --bg-color-light: #ffffff;
+  --text-color-light: #333;
+  --bg-color-dark: #2c2f39;
+  --text-color-dark: #f1f1f1;
+  --primary-color: #007bff;
+  --secondary-color: #ff5722;
+  --form-background: #f8f9fa;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header and Navigation */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+}
+
+.mode-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.mode-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Main Section */
+main {
+  padding: 30px;
+}
+
+/* Form Styles */
+form {
+  background-color: var(--form-background);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: var(--box-shadow);
+  font-size: 14px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+button.update-btn {
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button.update-btn:hover {
+  background-color: #e64a19;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --bg-color-light: #2c2f39;
+  --text-color-light: #f1f1f1;
+  --primary-color: #1e3d58;
+  --secondary-color: #ff5722;
+  --form-background: #444b58;
+}
+
+.dark-mode header {
+  background-color: var(--primary-color);
+}
+
+.dark-mode nav a {
+  color: #f1f1f1;
+}
+
+.dark-mode input {
+  background-color: #333;
+  color: var(--text-color-dark);
+  border: 1px solid #555;
+}
+
+.dark-mode input:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 4px rgba(255, 87, 34, 0.5);
+}
+
+.dark-mode button {
+  background-color: var(--secondary-color);
+}
+
+.dark-mode button:hover {
+  background-color: #e64a19;
+}
+
+form {
+  width: 900px;
+  padding: 1cm;
+}
